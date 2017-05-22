@@ -1,0 +1,74 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   NonameGame/.vs/NonameGame/v14/.suo
+#	new file:   NonameGame/.vs/NonameGame/v15/.suo
+#	new file:   NonameGame/Assembly-CSharp-Editor-firstpass.csproj
+#	new file:   NonameGame/Assembly-CSharp-firstpass.csproj
+#	new file:   NonameGame/Assembly-CSharp.csproj
+#	new file:   NonameGame/Assets/Animation.meta
+#	new file:   NonameGame/Assets/Animation/New Sprite.controller
+#	new file:   NonameGame/Assets/Animation/New Sprite.controller.meta
+#	new file:   NonameGame/Assets/Animation/Speech sigh2.controller
+#	new file:   NonameGame/Assets/Animation/Speech sigh2.controller.meta
+#	new file:   NonameGame/Assets/Animation/Speech_Sign_Moving_TeachSpacebar.anim
+#	new file:   NonameGame/Assets/Animation/Speech_Sign_Moving_TeachSpacebar.anim.meta
+#	new file:   NonameGame/Assets/Animation/speech_sign_moving.anim
+#	new file:   NonameGame/Assets/Animation/speech_sign_moving.anim.meta
+#	new file:   NonameGame/Assets/Code.meta
+#	new file:   NonameGame/Assets/Code/Battle.meta
+#	new file:   NonameGame/Assets/Code/Battle/Battle_Controller.cs
+#	new file:   NonameGame/Assets/Code/Battle/Battle_Controller.cs.meta
+#	new file:   NonameGame/Assets/Code/Control.meta
+#
+# Untracked files:
+#	NonameGame/Assets/Code/C_2_Py.cs
+#	NonameGame/Assets/Code/C_2_Py.cs.meta
+#	NonameGame/Assets/Code/Control/
+#	NonameGame/Assets/Code/CutScene.meta
+#	NonameGame/Assets/Code/CutScene/
+#	NonameGame/Assets/Code/Object.meta
+#	NonameGame/Assets/Code/Object/
+#	NonameGame/Assets/Code/PlayerController.cs
+#	NonameGame/Assets/Code/PlayerController.cs.meta
+#	NonameGame/Assets/Code/Py_optparse.py
+#	NonameGame/Assets/Code/Py_optparse.py.meta
+#	NonameGame/Assets/Code/SceneEvent.meta
+#	NonameGame/Assets/Code/SceneEvent/
+#	NonameGame/Assets/Code/TestInputparser.txt
+#	NonameGame/Assets/Code/TestInputparser.txt.meta
+#	NonameGame/Assets/Code/helloworld.py
+#	NonameGame/Assets/Code/helloworld.py.meta
+#	NonameGame/Assets/Code/helloworld.txt
+#	NonameGame/Assets/Code/helloworld.txt.meta
+#	NonameGame/Assets/Code/helloworld_new.py
+#	NonameGame/Assets/Code/helloworld_new.py.meta
+#	NonameGame/Assets/Model.meta
+#	NonameGame/Assets/Model/
+#	NonameGame/Assets/New Terrain 1.asset
+#	NonameGame/Assets/New Terrain 1.asset.meta
+#	NonameGame/Assets/New Terrain 2.asset
+#	NonameGame/Assets/New Terrain 2.asset.meta
+#	NonameGame/Assets/New Terrain.asset
+#	NonameGame/Assets/New Terrain.asset.meta
+#	NonameGame/Assets/Picture.meta
+#	NonameGame/Assets/Picture/
+#	NonameGame/Assets/Scence.meta
+#	NonameGame/Assets/Scence/
+#	NonameGame/Assets/Standard Assets.meta
+#	NonameGame/Assets/Standard Assets/
+#	NonameGame/Library/
+#	NonameGame/NonameGame.Editor.Plugins.csproj
+#	NonameGame/NonameGame.Plugins.csproj
+#	NonameGame/NonameGame.csproj
+#	NonameGame/NonameGame.sln
+#	NonameGame/NonameGame.userprefs
+#	NonameGame/ProjectSettings/
+#	NonameGame/obj/
+#
+
