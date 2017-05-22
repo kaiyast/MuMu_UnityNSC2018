@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scence/Scene2_Run&Fly.unity
+  isLoaded: 1
+  isActive: 1
