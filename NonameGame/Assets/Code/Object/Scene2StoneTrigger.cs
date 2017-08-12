@@ -8,15 +8,14 @@ public class Scene2StoneTrigger : MonoBehaviour {
 
     public GameObject ObjectToGlow;
 
-    private GameObject CodeController;
+    private GameObject SceneCore;
 
     public bool CheckUnlockTriger = false;
-
     // Use this for initialization
     Behaviour Halo;
 
     void Start () {
-        CodeController = GameObject.FindGameObjectWithTag("SceneCode");
+        SceneCore = GameObject.FindGameObjectWithTag("SceneCore");
         Halo = (Behaviour)ObjectToGlow.GetComponent("Halo");
         Halo.enabled = false;
         
@@ -35,7 +34,7 @@ public class Scene2StoneTrigger : MonoBehaviour {
         if (col.name == "Hero" && CheckUnlockTriger == true)
         {
             Halo.enabled = true;
-            CodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = true;
+            SceneCore.GetComponent<PlayerController>().CheckCanUseCodeEditer = true;
             print("On Trigger");
         }
 
@@ -44,11 +43,11 @@ public class Scene2StoneTrigger : MonoBehaviour {
 
     void OnTriggerExit(Collider col)
     {
-        if (col.name == "Hero"  && CheckUnlockTriger == true)
+        if (col.name == "Hero" && CheckUnlockTriger == true)
         {
             Halo.enabled = false;
-            CodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = false;
-            CodeController.GetComponent<PlayerController>().ForceCloseCodeEditer();
+            SceneCore.GetComponent<PlayerController>().CheckCanUseCodeEditer = false;
+            SceneCore.GetComponent<PlayerController>().ForceCloseCodeEditer();
             print("Off Trigger");
         }
     }

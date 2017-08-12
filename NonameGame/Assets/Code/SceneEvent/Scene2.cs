@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scene2 : MonoBehaviour {
 
     private int FallenNum = 0;
-    private GameObject SceneCode;
+    private GameObject SceneCore;
     private GameObject Hero;
 
     public GameObject StoneTrigger;
@@ -13,7 +13,7 @@ public class Scene2 : MonoBehaviour {
     public bool CheckTalking = false;
     // Use this for initialization
     void Start () {
-        SceneCode = GameObject.FindGameObjectWithTag("SceneCode");
+        SceneCore = GameObject.FindGameObjectWithTag("SceneCore");
         Hero = GameObject.FindGameObjectWithTag("Hero");
     }
 	
@@ -24,7 +24,7 @@ public class Scene2 : MonoBehaviour {
         {
             if (FallenNum == 1)
             {
-                SceneCode.GetComponent<TalkingEvent>().StartTalking();
+                SceneCore.GetComponent<TalkingEvent>().StartTalking();
                 Hero.GetComponent<HeroMovement>().SetCheckCutScene(true);
 
                 CheckTalking = true;
@@ -33,7 +33,7 @@ public class Scene2 : MonoBehaviour {
         }
         else
         {
-            if (SceneCode.GetComponent<TalkingEvent>().CheckTalkingDone == true)
+            if (SceneCore.GetComponent<TalkingEvent>().CheckTalkingDone == true)
             {
                
                 Hero.GetComponent<HeroMovement>().SetCheckCutScene(false);
