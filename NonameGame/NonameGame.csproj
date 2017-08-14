@@ -93,6 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AssetStore\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
+    <Compile Include="Assets\AssetStore\TornadoBanditsStudio\Low Poly Free Pack\Water\TBS_Water.cs" />
     <Compile Include="Assets\Code\Battle\Battle_Controller.cs" />
     <Compile Include="Assets\Code\C_2_Py.cs" />
     <Compile Include="Assets\Code\CutScene\TalkingEvent.cs" />
