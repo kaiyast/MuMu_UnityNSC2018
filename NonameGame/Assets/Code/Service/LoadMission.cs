@@ -45,5 +45,11 @@ public class LoadMission : MonoBehaviour {
         SceneManager.LoadScene("mission");
     }
 
+    public void loadscenebyname(string name)
+    {
+        BeginFade(-1);
+        SceneManager.LoadScene(name);
+    }
+
 
 }

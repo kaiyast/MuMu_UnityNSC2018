@@ -14,6 +14,8 @@
     private Vector3 moveDirection = Vector3.zero;
 
     //State
+
+    private bool isOpenEditor = false;
     private bool CheckCutScene = false;
 
     void Update()
@@ -21,15 +23,9 @@
         CharacterController controller = GetComponent<CharacterController>();
 
 
-        // is the controller on the ground?
-        if (controller.isGrounded)
-        {
-
-
-
-
-
-           
+            // is the controller on the ground?
+            if (controller.isGrounded)
+            {
 
                 //Feed moveDirection with input.
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -66,23 +62,26 @@
                     moveDirection.y = jumpSpeed;
                 }
 
-           
 
 
-        }
 
-        //Applying gravity to the controller
-        moveDirection.y -= gravity * Time.deltaTime;
+            }
 
-         if (CheckCutScene == false)
-        {
-            //Making the character move
-            controller.Move(moveDirection * Time.deltaTime);
-        }else
-        {
+            //Applying gravity to the controller
+            moveDirection.y -= gravity * Time.deltaTime;
+
+            if (!CheckCutScene && !isOpenEditor)
+            {
+                //Making the character move
+                controller.Move(moveDirection * Time.deltaTime);
+            }
+            else
+            {
             controller.Move(moveDirection * 0);
 
         }
+
+        
 
     }
 
@@ -91,4 +90,10 @@
 
         CheckCutScene = Status;
     }
+
+    public void setIsOpenEditor(bool input)
+    {
+        isOpenEditor = input;
+    }
+
 }

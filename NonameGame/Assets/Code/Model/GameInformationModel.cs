@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameInformationModel : MonoBehaviour {
 
 
-    public static string mission = "mission2";
+    public static string mission = "missioneditor";
 
+    public static string hoverobject = "none";
 
 }

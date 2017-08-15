@@ -22,12 +22,6 @@ public class Scene2StoneTrigger : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
-	void Update () {
-       
-
-    }
-
     void OnTriggerEnter(Collider col)
     {
 

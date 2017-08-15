@@ -8,23 +8,18 @@ public class GlowWhenHover : MonoBehaviour {
 
     public GameObject ObjectToGlow;
 
-    private GameObject CodeController;
+    private GameObject CoreCodeController;
     // Use this for initialization
     Behaviour Halo;
 
     void Start () {
-        CodeController = GameObject.FindGameObjectWithTag("SceneCode");
+        CoreCodeController = GameObject.FindGameObjectWithTag("SceneCore");
         Halo = (Behaviour)ObjectToGlow.GetComponent("Halo");
         Halo.enabled = false;
         
 
     }
 	
-	// Update is called once per frame
-	void Update () {
-       
-
-    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -32,7 +27,10 @@ public class GlowWhenHover : MonoBehaviour {
         if (col.name == "Hero")
         {
             Halo.enabled = true;
-            CodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = true;
+            CoreCodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = true;
+
+            GameInformationModel.hoverobject = ObjectToGlow.name;
+
             print("On Trigger");
         }
 
@@ -44,8 +42,8 @@ public class GlowWhenHover : MonoBehaviour {
         if (col.name == "Hero")
         {
             Halo.enabled = false;
-            CodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = false;
-            CodeController.GetComponent<PlayerController>().ForceCloseCodeEditer();
+            CoreCodeController.GetComponent<PlayerController>().CheckCanUseCodeEditer = false;
+            CoreCodeController.GetComponent<PlayerController>().ForceCloseCodeEditer();
             print("Off Trigger");
         }
     }

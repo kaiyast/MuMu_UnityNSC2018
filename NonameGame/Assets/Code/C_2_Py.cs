@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,10 +19,7 @@ public class C_2_Py : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-
-       
-
-        ReadCodeFileToInputField(SourcePath, NewFileName + ".py");
+        //ReadCodeFileToInputField(SourcePath, NewFileName + ".py");
     }
 	
 	// Update is called once per frame
@@ -37,26 +35,46 @@ public class C_2_Py : MonoBehaviour {
         CompilePyAndGet(TargetPath, NewFileName + "." + NewFileType);
     }
 
-    private void ReadCodeFileToInputField( string SourcePath, string FileName)
+    public void ReadCodeFileToInputField( string sourcePath, string FileName)
     {
 
-        string[] lines = System.IO.File.ReadAllLines(SourcePath+ @"\" + FileName);
 
-       
-        foreach (string line in lines)
+     
+
+      
+
+        string saveFilePath = Application.persistentDataPath + "/" + sourcePath + "/" + FileName + ".txt";
+        print(saveFilePath);
+
+        if(File.Exists(saveFilePath))
         {
-            CodeInputField.text += line + "\n";
+            print("Found");
+
+            string lines = File.ReadAllText(saveFilePath);
+            CodeInputField.text = lines;
+        }
+        else
+        {
+            print("NOt Found go init");
+            // init code
+            TextAsset lines = (TextAsset)Resources.Load(sourcePath + "/" + FileName);
+            CodeInputField.text = lines.text;
         }
 
+        SaveFile(CodeInputField, sourcePath, FileName + ".txt");
 
     }
 
-    private void SaveFile(InputField CodeInputField,  string SourcePath, string FileName)
+    private void SaveFile(InputField CodeInputField,  string sourcePath, string FileName)
     {
+        string savePath = Application.persistentDataPath + "/" + sourcePath + "/";
+        if (!File.Exists(savePath))
+        {
+            // create folder
+            Directory.CreateDirectory(savePath);
+        }
 
-        
-        System.IO.File.WriteAllText(SourcePath+@"\"+FileName, CodeInputField.text);
-
+        File.WriteAllText(savePath + FileName, CodeInputField.text);
     }
 
     private void CopyFile(string SourcePath, string TartgetPath, string FileName,string NewFileName, string NewFileType)
