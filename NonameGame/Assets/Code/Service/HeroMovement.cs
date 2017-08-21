@@ -16,7 +16,7 @@
     //State
 
     private bool isOpenEditor = false;
-    private bool CheckCutScene = false;
+    private bool isCutScene = false;
 
     void Update()
     {
@@ -70,7 +70,7 @@
             //Applying gravity to the controller
             moveDirection.y -= gravity * Time.deltaTime;
 
-            if (!CheckCutScene && !isOpenEditor)
+            if (!isCutScene && !isOpenEditor)
             {
                 //Making the character move
                 controller.Move(moveDirection * Time.deltaTime);
@@ -85,15 +85,17 @@
 
     }
 
-    public void SetCheckCutScene(bool Status)
+    public void setCheckCutScene(bool Status)
     {
 
-        CheckCutScene = Status;
+       isCutScene = Status;
     }
 
     public void setIsOpenEditor(bool input)
     {
         isOpenEditor = input;
     }
+
+
 
 }

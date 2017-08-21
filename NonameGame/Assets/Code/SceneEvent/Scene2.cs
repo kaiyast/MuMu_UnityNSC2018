@@ -25,7 +25,7 @@ public class Scene2 : MonoBehaviour {
             if (FallenNum == 1)
             {
                 SceneCore.GetComponent<TalkingEvent>().StartTalking();
-                Hero.GetComponent<HeroMovement>().SetCheckCutScene(true);
+                Hero.GetComponent<HeroMovement>().setCheckCutScene(true);
 
                 CheckTalking = true;
                 FallenNum += 10000;
@@ -36,7 +36,7 @@ public class Scene2 : MonoBehaviour {
             if (SceneCore.GetComponent<TalkingEvent>().CheckTalkingDone == true)
             {
                
-                Hero.GetComponent<HeroMovement>().SetCheckCutScene(false);
+                Hero.GetComponent<HeroMovement>().setCheckCutScene(false);
                 CheckTalking = false;
 
                 // Unlock CodeTab Skill

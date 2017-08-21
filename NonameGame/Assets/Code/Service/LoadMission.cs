@@ -51,5 +51,10 @@ public class LoadMission : MonoBehaviour {
         SceneManager.LoadScene(name);
     }
 
+    public void loadscenebysave()
+    {
+        loadscene(GameInformationModel.savemission);
+        
+    }
 
 }

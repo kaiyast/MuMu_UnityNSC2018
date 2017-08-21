@@ -9,4 +9,6 @@ public class GameInformationModel : MonoBehaviour {
 
     public static string hoverobject = "none";
 
+    public static string savemission = "mission2";
+
 }
